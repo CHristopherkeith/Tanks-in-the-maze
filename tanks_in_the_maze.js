@@ -415,7 +415,7 @@ var Bullet=function(object) {
 
 
 	this.draw = function() {
-		this.context.clearRect(this.x, this.y, this.width, this.height);
+		this.context.clearRect(this.x, this.y, this.width+1, this.height+1);
 		//子弹碰撞，回收
 		if (this.isColliding) {
 			return true;
