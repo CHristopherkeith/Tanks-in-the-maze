@@ -50,6 +50,15 @@ function preventDefault(event){
 }
 
 // Cross-browser support for requestAnimationFrame
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var requestAnimationFrame=window.requestAnimationFrame ||  
+   window.webkitRequestAnimationFrame ||  
+   window.mozRequestAnimationFrame ||  
+   window.oRequestAnimationFrame ||  
+   window.msRequestAnimationFrame;
 
-var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+var cancelAnimationFrame = window.cancelRequestAnimationFrame ||  
+   window.webkitCancelAnimationFrame ||  
+   window.webkitCancelRequestAnimationFrame ||  
+   window.mozCancelRequestAnimationFrame ||  
+   window.oCancelRequestAnimationFrame ||  
+   window.msCancelRequestAnimationFrame;
